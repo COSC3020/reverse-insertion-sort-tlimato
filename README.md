@@ -1,4 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Bi-S25fM)
 # Reverse Insertion Sort
 
 Consider the code for insertion sort we covered in class:
@@ -29,6 +28,13 @@ some basic testing code that uses [jsverify](https://jsverify.github.io/) in
 In the lectures, we covered that insertion sort has best-case time complexity of
 $\Theta(n)$ and worst-case time complexity of $\Theta(n^2)$. What is the
 average-case time complexity ($\Theta$)?
+
+1) The Outer loop always iterates ($\Theta(n)$) times regardless of other factors.
+
+2) The secondary loop will compare the current element with every previous element as the sorted section of the list grows. This may also require a swap with all previous elements.
+This makes sense given your extremes are either no swaps or all swaps, between the best and worst cases.
+
+The combination of outer loop and inner loop makes the average complexity as ($\Theta(n^2)$).
 
 Hint: Think about what happens in each iteration of the loop, and how often the
 loop is executed. Keep in mind that for asymptotic analysis we don't care about
